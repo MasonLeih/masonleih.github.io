@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Verification</title>
+    <link rel="icon" href="./flower.png" type="image/png">
+
+    <style>
+        @font-face {
+        font-family: 'TaylorSwiftHandwriting';
+        src: url('./Taylor\ Swift\ Handwriting.ttf') format('truetype');
+        /* You may include additional font formats for better cross-browser compatibility */
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            /* Black background color */
+            color: #add8e6;
+            /* Pale blue text color */
+        }
+
+        h1 {
+            color: #add8e6;
+            /* Pale blue text color for the heading */
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+
+        .success {
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
+
+        input,
+        button {
+            margin-top: 10px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #add8e6;
+            /* Pale blue border color */
+            background-color: transparent;
+            color: #add8e6;
+            text-align: center;
+            /* Pale blue text color */
+        }
+
+        button{
+            margin-bottom: 10vh;
+            font-family: 'TaylorSwiftHandwriting', sans-serif;
+            font-size: 1.25rem;
+        }
+
+        label{
+            margin-top: 10vh;
+            font-size: 1.3rem;
+        }
+
+        button:hover {
+            background-color: #add8e6;
+            /* Pale blue background color on hover */
+            color: #fff;
+            /* White text color on hover */
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>This is just a warm up. <br> The real hunt starts tomorrow</h1>
+
+    <label for="password">Enter Password: </label>
+    <input type="password" id="password">
+    <br>
+    <button onclick="checkPassword()">Submit</button>
+
+    <div id="result"></div>
+
+    <script>
+        function checkPassword() {
+            var enteredPassword = document.getElementById('password').value;
+            var predeterminedPassword = '01011583836'; // Replace with your actual password
+
+            if (enteredPassword === predeterminedPassword) {
+                displayResult('success', 'Access granted! You entered the correct password.');
+
+                setTimeout(function () {
+                    window.location.href = 'flower.html'; // Redirect to index.html after 5 seconds
+                }, 2000);
+            } else {
+                displayResult('error', 'Incorrect password. Please try again.');
+            }
+        }
+
+        function displayResult(className, message) {
+            var resultElement = document.getElementById('result');
+            resultElement.innerHTML = '<p class="' + className + '">' + message + '</p>';
+        }
+    </script>
+
+</body>
+
+</html>

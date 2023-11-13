@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #0a0a2a;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#flower {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url('flower.png');
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: opacity 2.8s;
+    /* Adjust the duration as needed */
+}
+
+.expanded {
+    animation: expandAnimation 2.8s forwards;
+    /* Adjust the duration as needed */
+}
+
+@keyframes expandAnimation {
+    to {
+        transform: scale(30) rotate(270deg);
+        /* Adjust the scale factor as needed */
+        opacity: 0;
+    }
+}

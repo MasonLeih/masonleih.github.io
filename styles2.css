@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'TaylorSwiftHandwriting';
+    src: url('./Taylor\ Swift\ Handwriting.ttf') format('truetype');
+    /* You may include additional font formats for better cross-browser compatibility */
+}
+
+body :not(i){
+    margin: 0;
+    font-family: 'TaylorSwiftHandwriting', sans-serif;
+    overflow: hidden;
+    /* Hide content overflow during animation */
+}
+
+strong{
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.background-color{
+    background-color: #0a0a2a;
+    z-index: 2;
+}
+
+.background-image {
+    background-image: url('./gray.jpg');
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeInBackground 3s ease-in forwards;
+    /* Animation for background image */
+}
+
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+        /* Initial opacity to 0 */
+    }
+
+    to {
+        opacity: 1;
+        /* Final opacity to 1 */
+    }
+}
+
+.loaded {
+    background-color: rgba(10, 10, 42, 1);
+    /* Set the background color after the fade-in */
+}
+
+.title {
+    color: rgba(10, 10, 42, 0.8);
+    text-align: center;
+    font-size: 3rem;
+    padding: 20px;
+    margin-top: 5.5vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.translucent-box {
+    background-color: rgba(10, 10, 42, 0.7);
+    position: absolute;
+    padding: 10px 20px 10px;
+    max-width: 80%;
+    border-radius: 15px;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.translucent-box p {
+    color: #fff;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.translucent-box strong {
+    font-weight: bold;
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    .translucent-box {
+        margin-top: 12vh;
+        overflow-y: auto;
+        max-height: 62vh;
+    }
+}
+
+/* Add these styles for the copy button */
+.copy-button {
+    background-color: transparent;
+    color: #000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 90%;
+}
+
+.copy-button i {
+    margin-right: 5px;
+    font-size: 2rem;
+}
+
+hr{
+    width: 50%;
+    margin-left: 25% !important;
+    margin-top: 2.5% !important;
+    /* Center the <hr> within its container */
+    border-color: #E3E3E3;
+    color: #E3E3E3;
+    background-color: #E3E3E3;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a2a;
+    /* Adjust the background color as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+#main-content {
+    display: none;
+}
+
+#bgc{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0a2a;
+    /* Adjust the background color as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: -2;
+}

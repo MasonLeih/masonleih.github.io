@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./flower.png" type="image/png">
+    <link rel="stylesheet" href="styles2.css">
+    <!-- Add Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"
+        integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+
+    <title>Day 0</title>
+</head>
+
+<body>
+
+    <div id="loading-screen"></div>
+    <div id="bgc"></div>
+
+    <div class="background-color" id="main-content">
+        <div class="background-image">
+            <h1 class="title">Treasure Awaits Yomna. Listen, Observe, Reveal</h1>
+        
+            <div class="container">
+                <div class="translucent-box" id="translucentBox">
+        
+                    <p>'We're alike, you and me,' old Ben 23.5.1.20.8.5.18.19.20.1.6.6 said to Mary. 'We're not pretty to look
+                        at and we're both very
+                        disagreeable.'
+                        Poor Mary! Nobody wants her, nobody likes her. Her
+                        parents have died, and she is sent home from India to
+                        live in her uncle's house in Yorkshire. It is a big old
+                        house, with nearly a hundred rooms, but most of them
+                        are 'shut and locked. Mary is cross and bored, and
+                        lonely. There is nothing to do all day, and no one to
+                        talk to, except old Ben 23.5.1.20.8.5.18.19.20.1.6.6, the gardener.
+                        But then Mary learns about the <strong>[REDACTED]</strong>. The door
+                        is locked and hidden, and the key is lost. No one has
+                        been inside the secret <strong>[REDACTED]</strong> for ten years - except the
+                        robin, who flies over the wall. Mary watches the robin,
+                        and wonders where the key is...
+                        And then there is that strange crying in the night,
+                        somewhere in the house. It sounds like a child crying...
+                    </p>
+        
+                    <hr>
+        
+                    <button class="copy-button" onclick="copyToClipboard()">
+                        <i class="fa-regular fa-clipboard" style="color: #e3e3e3;"></i>
+                    </button>
+        
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        document.onreadystatechange = function () {
+                if (document.readyState === "complete") {
+                    // Hide the loading screen and show the main content
+                    document.getElementById('loading-screen').style.display = 'none';
+                    document.getElementById('main-content').style.display = 'block';
+                }
+            };
+
+        function copyToClipboard() {
+            var textToCopy = document.getElementById('translucentBox').innerText;
+            var textArea = document.createElement("textarea");
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+        }
+
+        // document.addEventListener('DOMContentLoaded', function () {
+        //         // Simulate some loading time (adjust as needed)
+        //         setTimeout(function () {
+        //             // Hide the loading screen
+        //             document.getElementById('loading-screen').style.display = 'none';
+        //             // Display the main content
+        //             document.getElementById('main-content').style.display = 'block';
+        //         }, 1000); // Adjust the delay based on your needs
+        //     });
+
+        // document.onreadystatechange = function () {
+        //         if (document.readyState !== "complete") {
+        //             document.querySelector(
+        //                 "#main-content").style.display = "none";
+        //             document.querySelector(
+        //                 "#loading-screen").style.visibility = "visible";
+        //         } else {
+        //             document.querySelector(
+        //                 "#loading-screen").style.display = "none";
+        //             document.querySelector(
+        //                 "main-content").style.display = "block";
+        //         }
+        //     };
+
+    </script>
+
+</body>
+
+</html>
