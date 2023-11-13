@@ -93,9 +93,9 @@ strong{
 
 @media screen and (max-width: 600px) {
     .translucent-box {
-        margin-top: 30vh;
+        margin-top: 15vh;
         overflow-y: auto;
-        max-height: 40vh;
+        max-height: 50vh;
     }
 
     .translucent-box p{
