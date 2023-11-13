@@ -93,9 +93,18 @@ strong{
 
 @media screen and (max-width: 600px) {
     .translucent-box {
-        margin-top: 12vh;
+        margin-top: 20vh;
         overflow-y: auto;
-        max-height: 62vh;
+        max-height: 45vh;
+    }
+
+    .translucent-box p{
+        font-size: 1.25rem;
+    }
+
+    .title{
+        margin-top: 7vh ;
+        font: 1.5rem;
     }
 }
 
