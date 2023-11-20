@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation</title>
+    <link rel="icon" href="./flower.png" type="image/png">
+    <link rel="stylesheet" href="./styles231.css">
+</head>
+
+<body>
+    <div class="part1">
+        <h1>Pentru totdeauna și mereu, chiar și în moarte, te voi iubi</h1>
+
+        <div class="input-container">
+            <label for="translation" class="label1">Translate from:</label>
+            <input type="text" id="translation" placeholder="">
+            <label for="toEnglish" class="label2"> to English</label>
+        </div>
+
+        <button onclick="checkTranslation()">Translate</button>
+
+        <div class="result"></div>
+    </div>
+
+    <div class="part2">
+        <h1 class="heading">I'm a melody of warmth, a breeze so light,
+            In summer and spring, I take my flight. <br>
+            With every note, emotions rise,
+            Stirring up tears in your eyes.</h1>
+
+        <div class="character-inputs">
+                <input id="1" type="text" maxlength="1" oninput="focusNext(this)">
+                <input id="2" class="middle" type="text" maxlength="1" oninput="focusNext(this)">
+                <input id="3" class="middle" type="text" maxlength="1" oninput="focusNext(this)">
+                <input id="4" class="seperator middle" type="text" maxlength="1" oninput="focusNext(this)">
+ 
+                <br>
+ 
+                <input id="5"  class="topm" type="text" maxlength="1" oninput="focusNext(this)">
+                <input id="6" class="seperator vi topm" id="line_break" type="text" maxlength="1" oninput="focusNext(this)">
+ 
+                <input id="7" class="vii topm" type="text" maxlength="1" oninput="focusNext(this)">
+                <input id="8" class="seperator topm" type="text" maxlength="1" oninput="focusNext(this)">
+ 
+                <br>
+ 
+                <input id="9" class="topm" type="text" maxlength="1" oninput="focusNext(this)">
+                <input id="10" class="middle topm" type="text" maxlength="1" oninput="focusNext(this)">
+                <input id="11" class="middle topm" type="text" maxlength="1" oninput="focusNext(this)">
+                <input id="12" class="middle topm" type="text" maxlength="1" oninput="focusNext(this)">
+                <input id="13" class="middle topm" type="text" maxlength="1" oninput="focusNext(this)">
+                <input id="14" class="last_letter" type="text" maxlength="1" oninput="focusNext(this)">
+        </div>
+
+        <button class="submit-button" onclick="checkPassword()">Submit</button>
+        
+        <div class="result"></div>
+    </div>
+
+    <script src="./script231.js"></script>
+</body>
+
+</html>

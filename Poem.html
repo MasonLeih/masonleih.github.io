@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./flower.png" type="image/png">
+    <link rel="stylesheet" href="styles2.css">
+    <!-- Add Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"
+        integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+
+    <title>Poem</title>
+</head>
+
+<body>
+
+    <div id="loading-screen"></div>
+    <div id="bgc"></div>
+
+    <div class="background-color" id="main-content">
+        <div class="background-image">
+            <h1 class="title">XXII</h1>
+        
+            <div class="container">
+                <div class="translucent-box" id="translucentBox">
+        
+                    <p>
+                        '89 vibes, a quirky cheer,<br>
+                        A tale to tell, so lend an ear.<br>
+                        In shades of blue and white I stood,<br>
+                        Trying to glance at you, wishing I could.<br>
+                        As I sat, my petals shook; nervousness,<br>
+                        Then came your sight, a silent caress.<br><br>
+                    
+                        In whispers soft, your beauty graced,<br>
+                        A gentle aura, time embraced.<br>
+                        In the tapestry of time that gracefully weaves,<br>
+                        A portrait of charm that forever believes.<br>
+                        At twenty-two or seventy's kind hold,<br>
+                        Your charm and allure, an eternal mold.<br><br>
+                    
+                        Your eyes a tranquil, a soothing fall,<br>
+                        Reflecting peace, serenity for all.<br>
+                        A calming grace in every smile,<br>
+                        Rendering every single thought futile.<br><br>
+                    
+                        By the beach and through the air,<br>
+                        Under the moon and the starry glare.<br>
+                        Mesmerized by you, my eyes lingered,<br>
+                        Captivated, spellbound, enraptured,<br>
+                        Your radiance compelled my unwavering stare.<br><br>
+                    
+                        In the realm of intellect you take your throne,<br>
+                        A mind that sparkles, uniquely your own.<br>
+                        Intriguing puzzles, your mind untangles,<br>
+                        A symphony of thoughts, where genius dangles.<br><br>
+                    
+                        Your insights shimmer, like a cosmic trail,<br>
+                        A comet of brilliance, leaving a tale.<br>
+                        In the silent language of intelligence's embrace,<br>
+                        You speak volumes with impressive grace.<br><br>
+                    
+                        A forever promise,<br>
+                        And hope that with you I'd find solace.<br>
+                        From before we met, I was meant for you,<br>
+                        A silent idea in the morning dew.<br><br>
+                    
+                        Here's the hint, a secret to unveil,<br>
+                        A tale to tell, so lend an ear.<br>
+                        No grand love story, just a casual meet,<br>
+                        In our world of blooms, where colors fleet.<br>
+                        Retrace with me the steps we once knew,<br>
+                        Where our eyes first danced and blocked the view.
+                    </p>
+        
+                    <hr>
+        
+                    <button class="copy-button" onclick="copyToClipboard()">
+                        <i class="fa-regular fa-clipboard" style="color: #e3e3e3;"></i>
+                    </button>
+        
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        document.onreadystatechange = function () {
+                if (document.readyState === "complete") {
+                    // Hide the loading screen and show the main content
+                    document.getElementById('loading-screen').style.display = 'none';
+                    document.getElementById('main-content').style.display = 'block';
+                }
+            };
+
+        function copyToClipboard() {
+            var textToCopy = document.getElementById('translucentBox').innerText;
+            var textArea = document.createElement("textarea");
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+        }
+
+        // document.addEventListener('DOMContentLoaded', function () {
+        //         // Simulate some loading time (adjust as needed)
+        //         setTimeout(function () {
+        //             // Hide the loading screen
+        //             document.getElementById('loading-screen').style.display = 'none';
+        //             // Display the main content
+        //             document.getElementById('main-content').style.display = 'block';
+        //         }, 1000); // Adjust the delay based on your needs
+        //     });
+
+        // document.onreadystatechange = function () {
+        //         if (document.readyState !== "complete") {
+        //             document.querySelector(
+        //                 "#main-content").style.display = "none";
+        //             document.querySelector(
+        //                 "#loading-screen").style.visibility = "visible";
+        //         } else {
+        //             document.querySelector(
+        //                 "#loading-screen").style.display = "none";
+        //             document.querySelector(
+        //                 "main-content").style.display = "block";
+        //         }
+        //     };
+
+    </script>
+
+</body>
+
+</html>
