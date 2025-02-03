@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./flower.png" type="image/png">
+    <link rel="stylesheet" href="styles2.css">
+    <!-- Add Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"
+        integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+
+    <title>Poem</title>
+</head>
+
+<body>
+
+    <div id="loading-screen"></div>
+    <div id="bgc"></div>
+
+    <div class="background-color" id="main-content">
+        <div class="background-image">
+            <h1 class="title">A game carved from your heart</h1>
+        
+            <div class="container">
+                <div class="translucent-box" id="translucentBox">
+        
+                    <p>
+                        You shaped a world with tender hands,<br>
+Pixels stitched with love’s command,<br>
+Every line, each whispered code,<br>
+A path where only we have strode.<br>
+<br>
+Based on intimacy,<br>
+A game so sexy,<br>
+You, once more, captured my soul,<br>
+With no mercy.<br>
+<br>
+Born of passion, fierce and bright,<br>
+Lit by echoes of our nights,<br>
+Commitment woven, thread by thread,<br>
+In colors only we have bled.<br>
+<br>
+I walked through spaces you designed,<br>
+Ecstasy filling my heart and mind.<br>
+I hope I'm able to give back,<br>
+All the love with which my life you hijack.<br>
+<br>
+I love the way you build and dream,<br>
+The silent spaces in between,<br>
+The way your soul spills into art,<br>
+A game carved from your heart.<br>
+<br>
+Forever and ever I will stay,<br>
+In the hope I'm able to pay,<br>
+All that you've done and more,<br>
+I promise you, it's never a bore,<br>
+It's something I want, so you I implore,<br>
+Never feel like a burden to me.<br>
+I love existing for you, nothing could make me more free.
+                    </p>
+        
+                    <hr>
+        
+                    <button class="copy-button" onclick="copyToClipboard()">
+                        <i class="fa-regular fa-clipboard" style="color: #e3e3e3;"></i>
+                    </button>
+        
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        document.onreadystatechange = function () {
+                if (document.readyState === "complete") {
+                    // Hide the loading screen and show the main content
+                    document.getElementById('loading-screen').style.display = 'none';
+                    document.getElementById('main-content').style.display = 'block';
+                }
+            };
+
+        function copyToClipboard() {
+            var textToCopy = document.getElementById('translucentBox').innerText;
+            var textArea = document.createElement("textarea");
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+        }
+
+        // document.addEventListener('DOMContentLoaded', function () {
+        //         // Simulate some loading time (adjust as needed)
+        //         setTimeout(function () {
+        //             // Hide the loading screen
+        //             document.getElementById('loading-screen').style.display = 'none';
+        //             // Display the main content
+        //             document.getElementById('main-content').style.display = 'block';
+        //         }, 1000); // Adjust the delay based on your needs
+        //     });
+
+        // document.onreadystatechange = function () {
+        //         if (document.readyState !== "complete") {
+        //             document.querySelector(
+        //                 "#main-content").style.display = "none";
+        //             document.querySelector(
+        //                 "#loading-screen").style.visibility = "visible";
+        //         } else {
+        //             document.querySelector(
+        //                 "#loading-screen").style.display = "none";
+        //             document.querySelector(
+        //                 "main-content").style.display = "block";
+        //         }
+        //     };
+
+    </script>
+
+</body>
+
+</html>
